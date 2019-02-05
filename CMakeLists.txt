@@ -613,11 +613,11 @@ if (UNIX OR APPLE)
       # Build Process
       set(CAFFE_CPU_ONLY OFF)
       if (${GPU_MODE} MATCHES "CUDA")
-        execute_process(COMMAND git checkout master WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/3rdparty/caffe)
+        execute_process(COMMAND git checkout armar6 WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/3rdparty/caffe)
       elseif (${GPU_MODE} MATCHES "CPU_ONLY")
         if (USE_MKL)
           #execute_process(COMMAND git checkout intel WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/3rdparty/caffe)
-          execute_process(COMMAND git checkout b6712ce WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/3rdparty/caffe)
+          execute_process(COMMAND git checkout armar6 WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/3rdparty/caffe)
           execute_process(COMMAND sh prepare_mkl.sh WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/3rdparty/caffe/external/mkl
               OUTPUT_VARIABLE rv)
           set( MLIST ${rv} )
