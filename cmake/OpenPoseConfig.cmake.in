@@ -6,11 +6,11 @@ get_filename_component(_prefix "${_dir}/../.." ABSOLUTE)
 include("${_prefix}/lib/OpenPose/OpenPose.cmake")
 if (@BUILD_CAFFE@)
   set(Caffe_INCLUDE_DIRS "${_prefix}/include/caffe")
-  # set(Caffe_LIBS "${_prefix}/lib/libcaffe.so")
+  set(Caffe_LIBRARY_DIRS "${_prefix}/lib/x86_64-linux-gnu")
 endif (@BUILD_CAFFE@)
 
 # Report other information
-set(OpenPose_INCLUDE_DIRS "${_prefix}/include/openpose")
+set(OpenPose_INCLUDE_DIRS "${_prefix}/include")
 set(OpenPose_VERSION_MAJOR @OpenPose_VERSION_MAJOR@)
 set(OpenPose_VERSION_MINOR @OpenPose_VERSION_MINOR@)
 set(OpenPose_VERSION_PATCH @OpenPose_VERSION_PATCH@)
